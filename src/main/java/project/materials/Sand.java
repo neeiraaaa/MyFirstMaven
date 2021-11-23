@@ -17,5 +17,6 @@ public class Sand implements Transformable {
     @Override
     public void setTemperature(int temperature) {
 
+        
     }
 }

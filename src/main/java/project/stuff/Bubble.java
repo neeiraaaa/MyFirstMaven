@@ -6,7 +6,7 @@ public class Bubble  {
     private String gas;
 
 //содержит конструктор Bubble(String gas), в который передается строка с названием газа пузырька
-    public Bubble(double volume, String gas) {
+    public Bubble(String gas) {
         System.out.printf("Gas name is: %s", gas).println();
         this.gas = gas;
     }

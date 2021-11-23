@@ -1,24 +1,32 @@
 package project.stuff;
 
-import project.stuff.Bubble;
-import project.stuff.Water;
+import java.util.Arrays;
 
 public class SparklingWater extends Water {
 
     private boolean isOpened;
     private Bubble[] bubbles;
 
+    public SparklingWater(String color, String transparency, String smell, int temperature){
+        isOpened();
+    }
 //содержит конструктор, который сетает нужное количество пузырьков из рассчета, что 1 литр воды содержит 10 тыс пузырьков
 // и вызывает внутренний метод isOpened();
-    public SparklingWater(String color, String transparency, String smell, int temperature) {
+    public SparklingWater(double volume) {
+        var count = (int) Math.round(volume * 10000);
+        bubbles = new Bubble[count];
+        for (int i = 0; i < count; i++) {
+            bubbles[i] = new Bubble("air");
+        }
         isOpened();
     }
 
 
     //есть публичный метод void setOpened(boolean isOpened), который меняет состояние воды на "открытое"
 // public setOpen(), который переводит состояние открытости true
-    public void setOpened(boolean isOpened) {
+    public boolean setOpened(boolean isOpened) {
         this.isOpened = isOpened;
+        return isOpened;
     }
 
 //есть приватный метод void isOpened(), который в новом потоке проверят состояние воды на "открытость"
@@ -39,10 +47,19 @@ public class SparklingWater extends Water {
 
 //есть приватный метод degas(), который каждую секунду выпускает по партии пузырьков
 // из рассчета 10 + 5 * температура_воды
-
 // private degas(), который каждую секунду выпускает по партии пузырьков из рассчета 10 + 5 * температура_воды
+//у газировки есть метод degas(), который удаляет пузырьки по одному и вызывает их лопанье
     private void degas() {
-
+        if (this.isSparkle(true)){
+            System.out.println("Output part of bubbles every second");
+            int expectedCount = (10 + 5) * this.getTemperature();
+            int possibleBubblesAmount = Math.min(expectedCount, this.bubbles.length);
+            for (int i = 0; i < possibleBubblesAmount; i++) {
+                Bubble b = this.bubbles[i];
+                b.cramp();
+                this.bubbles = Arrays.copyOfRange(this.bubbles, possibleBubblesAmount, this.bubbles.length-1);
+            }
+        }
     }
 
 //есть публичный метод boolean isSparkle(), возвращающий true если в воде еще есть пузырьки газа

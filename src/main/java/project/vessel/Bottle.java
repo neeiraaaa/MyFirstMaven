@@ -10,23 +10,26 @@ public class Bottle extends Vessel implements Containable {
 
 //содержит приватные поля double volume, SparklingWater water
     private double volume;
-    private SparklingWater water;
+    private SparklingWater water = new SparklingWater(1);
     private int [] arrayBubbles;
 
 //содержит конструктор Bottle(double volume), в котором бутылка заполняется массивом из пузырьков из рассчета 10000 на каждый литр
     public Bottle(double volume) {
         this.volume = volume;
         this.arrayBubbles = new int[(int) (volume * 10000)];
+        System.out.println("Бутылка заполняется массивом пузырьков" + this.arrayBubbles);
     }
 
     //есть публичный метод void open(), который меняет состояние воды в "открытое" (приблизительно, как this.water.setOpened(true);)
+    // есть метод open(), который вызывает метод degas() в газировке
     public void open() {
-       this.water.setOpened(true);
+        System.out.println("Вода открытая? " + this.water.setOpened(true));
    }
 
     //есть публичный метод void warm(int temperature), который устанавливает температуру воды в бутылке
     public void warm(int temperature) {
-        water.setTemperature(temperature);
+        System.out.println("Температура воды в бутылке ");
+        System.out.println(temperature);
     }
 
     //есть публичный метод SparklingWater getWater() возвращающий обьект воды
@@ -34,10 +37,12 @@ public class Bottle extends Vessel implements Containable {
         return new SparklingWater(water.getColor(), water.getTransparency(), water.getSmell(), water.getTemperature());
     }
 
+
 //есть публичный метод setWater(SparklingWater water) добавляющий новый обьект воды
     public SparklingWater setWater(SparklingWater water) {
-        return new SparklingWater(water.getColor(), "normal", "powerful", 213);
+        return new SparklingWater ("green", "normal", "powerful", 213);
     }
+
 
     @Override
     public double getVolume() {
