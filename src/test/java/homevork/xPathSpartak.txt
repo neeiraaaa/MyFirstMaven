@@ -1,0 +1,31 @@
+Логотип Спартак:
+1. //img[@alt = 'логотип Спартак']
+2. //img[@title = 'Спартак']
+
+Информация для партнеров:
+1. //div[@class='content_menu']/div/ul/li[3]/a/span[contains(.,'Информация для партнеров')]
+2. /ul[@class='menu full']/li[3]/a/span[contains(.,'Информация для партнеров')] (два совпадения)
+
+Ch:
+1. //a[@class ='header__lang__item header__lang__item_eng'][3]
+2. //a[@href ='/cn/']
+
+Quality since
+1. //td[@class='text center']/div[3]/img[@src='/bitrix/templates/our_shop/images/Quality.png']
+2. //li[@class= 'box desktop_slide light center']/div/table/tbody/tr/td/div[3]//img[@src='/bitrix/templates/our_shop/images/Quality.png']
+
+VK
+1.//ul[@class='social_list']/li/a/img[@src='/bitrix/templates/our_shop/images/VK.svg']
+2.
+
+YouTube
+1.//ul[@class='social_list']/li[5]/a/img[@src='/bitrix/templates/our_shop/images/youtube.svg']
+2. //@src[contains(.,'/bitrix/templates/our_shop/images/VK.svg')] (два совпадения)
+
+О компании
+1. //div[@class='content_menu']/div/ul[2]/li/a/span[contains(.,'О компании')]
+2
+
+Наши представительства
+1. //div[@class='wrapper_inner']/ul/li[3]/a/img[2]        ДОПИСАТЬ!
+2.

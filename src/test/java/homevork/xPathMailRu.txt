@@ -1,0 +1,45 @@
+Мой Мир
+1. //div[@class='ph-projects svelte-1dxh3mc']/a[3]
+2. //div[@class='ph-projects svelte-1dxh3mc']/a[2]/following-sibling::*
+
+Картинки
+1. //div[@id='search__categories']/a[3]
+2. //a[@data-name='pictures']
+
+Значок лупы
+1.//label[@class='search__icon svelte-byes78']
+2. //input[@id='q']/following-sibling::*
+
+Леди
+1. //div[@class='tabs svelte-p4qp2u']/a[4]
+2. //div[@class='tabs svelte-p4qp2u']/a[3]/following-sibling::*
+
+Кнопка Найти
+1. //button[@id='search:submit']
+2. //form[@class='search svelte-byes78']/button[@id='search:submit']
+
+Значок облака
+1. //a[@title='Облако'] //*[name()="svg" and @height="16"]    МОЖНО БОЛЬШЕ ЛОКАЛИЗОВАТЬ
+2.
+
+mail.ru
+1. //select[@name='domain']
+2. //select[@class='domain-select svelte-1tib0qz']
+
+ввести пароль
+1. //button[@class='button svelte-1tib0qz']
+2. //button[@data-testid='enter-password']
+
+создать почту
+1. //a[@href='//account.mail.ru/signup?from=main&rf=auth.mail.ru&app_id_mytracker=58519']
+2. //div[@class='footer svelte-17m18q2']/a[@href='//account.mail.ru/signup?from=main&rf=auth.mail.ru&app_id_mytracker=58519']
+
+одноклассники
+1. //a[@href='https://trk.mail.ru/c/j7o0r9?mt_sub1=mail.ru&mt_sub2=widget&mt_sub3=main_desktop&mt_sub4=824011']
+2. //div[@class='asteroid-base-header svelte-gfcsh0']/a[@href='https://trk.mail.ru/c/j7o0r9?mt_sub1=mail.ru&mt_sub2=widget&mt_sub3=main_desktop&mt_sub4=824011']
+
+новость
+1. //a[@href='https://news.mail.ru/politics/48996814/?frommail=1']
+2. //div[@class='news-item svelte-19oymnb']/a[@href='https://news.mail.ru/politics/48996814/?frommail=1']
+
+
