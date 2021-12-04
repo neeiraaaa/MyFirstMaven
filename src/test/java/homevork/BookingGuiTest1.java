@@ -20,7 +20,7 @@ public class BookingGuiTest1 {
         driver.findElement(By.xpath("//td[@data-date='2021-12-06']")).click();
         driver.findElement(By.xpath("//td[@data-date='2021-12-12']")).click();
         System.out.println("2 гостя: " + driver.findElement(By.xpath("//span[contains(.,'2 взрослых')]/span[@data-adults-count]")).isDisplayed());
-        //System.out.println("1 номер:  " + driver.findElement (By.xpath("//span[contains(.,'2 взрослых')]/span[4]")).getText()); //span[contains(.,'1 номер')]/span[3]/span
+        //System.out.println("1 номер:  " + driver.findElement (By.xpath("//span[contains(.,'2 взрослых')]/span[4]")).isDisplayed()); //span[contains(.,'1 номер')]/span[3]/span
         Thread.sleep(2000);
         driver.findElement(By.xpath("//div[@class='sb-searchbox-submit-col -submit-button ']")).click();
         System.out.println("Есть ли отели на выбранные даты: " + driver.findElement(By.xpath("//div[@class='ea52000380']")).isDisplayed());
