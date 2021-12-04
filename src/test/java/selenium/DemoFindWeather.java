@@ -17,7 +17,7 @@ public class DemoFindWeather {
         driver.get("https://google.com");
         driver.findElement(By.name("q")).sendKeys("погода Минск");
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//span[contains(.,'сейчас')]")).click();
+        driver.findElement(By.xpath("//span[contains(.,'сегодня')]")).click();
         driver.findElement(By.xpath("//div[@id = 'wob_dp']/div[@data-wob-di='1']")).click();
 
             String dayOfWeek =
